@@ -102,8 +102,22 @@
 <table><thead><tr><td>num_pedido</td><td>cliente</td><td>vendedor</td><td>produto</td><td>quantidade</td><td>valor_unitario</td><td>valor_total</td></tr></thead><tbody><tr><td><span>1</span></td><td><span>Pedro Silva</span></td><td><span>Alberto Vieira</span></td><td><span>Arroz</span></td><td><span>10</span></td><td><span>5.00</span></td><td><span>50.00</span></td></tr><tr><td><span>1</span></td><td><span>Pedro Silva</span></td><td><span>Alberto Vieira</span></td><td><span>Feijão</span></td><td><span>5</span></td><td><span>6.00</span></td><td><span>30.00</span></td></tr><tr><td><span>2</span></td><td><span>Maria Bezerra</span></td><td><span>Alberto Vieira</span></td><td><span>Arroz</span></td><td><span>2</span></td><td><span>5.50</span></td><td><span>11.00</span></td></tr><tr><td><span>2</span></td><td><span>Maria Bezerra</span></td><td><span>Alberto Vieira</span></td><td><span>Feijão</span></td><td><span>3</span></td><td><span>6.00</span></td><td><span>18.00</span></td></tr></tbody></table>
 
 <br><br>
-# 4. WHERE
+# 4. GROUP BY
 
 #### SELECT CONCAT(v.nome, ' ', v.sobrenome) vendedor, SUM(ip.quantidade * ip.valor_unitario) total_de_vendas FROM pedido p INNER JOIN vendedor v ON v.id = p.vendedor_id INNER JOIN item_pedido ip ON ip.pedido_id = p.id GROUP BY vendedor;
 
 <table><thead><tr><td>vendedor</td><td>total_de_vendas</td></tr></thead><tbody><tr><td><span>Alberto Vieira</span></td><td><span>109.00</span></td></tr></tbody></table>
+
+<br><br>
+# 5. WHERE
+
+#### SELECT CONCAT(c.nome, ' ', c.sobrenome) cliente FROM cliente c WHERE c.nome ~ '^M' OR c.sobrenome ~ '^M';
+
+<table><thead><tr><td>cliente</td></tr></thead><tbody><tr><td><span>João Melo</span></td></tr><tr><td><span>Maria Bezerra</span></td></tr></tbody></table>
+
+<br><br>
+# 6. ORDER BY
+
+#### SELECT CONCAT(c.nome, ' ', c.sobrenome) cliente FROM cliente c ORDER BY cliente;
+
+<table><thead><tr><td>cliente</td></tr></thead><tbody><tr><td><span>João Melo</span></td></tr><tr><td><span>Maria Bezerra</span></td></tr><tr><td><span>Pedro Silva</span></td></tr></tbody></table>
