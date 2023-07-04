@@ -89,4 +89,6 @@
 <br><br>
 # 3. JOIN
 
+#### SELECT p.descricao produto, f.nome fornecedor FROM produto_fornecedor pf INNER JOIN produto p ON p.id = pf.produto_id INNER JOIN fornecedor f ON f.id = pf.fornecedor_id;
 
+<table><thead><tr><td>produto</td><td>fornecedor</td></tr></thead><tbody><tr><td><span>Arroz</span></td><td><span>Emoções</span></td></tr><tr><td><span>Feijão</span></td><td><span>Turquesa</span></td></tr></tbody></table>
