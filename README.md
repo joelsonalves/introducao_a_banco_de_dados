@@ -53,6 +53,34 @@
 
 # SELECT SIMPLES
 
-SELECT * FROM cliente;
+#### SELECT * FROM cliente;
 
 <table><thead><tr><td>id</td><td>nome</td><td>sobrenome</td></tr></thead><tbody><tr><td><span>1</span></td><td><span>João</span></td><td><span>Melo</span></td></tr><tr><td><span>2</span></td><td><span>Pedro</span></td><td><span>Silva</span></td></tr><tr><td><span>3</span></td><td><span>Maria</span></td><td><span>Bezerra</span></td></tr></tbody></table>
+
+#### SELECT * FROM produto;
+
+<table><thead><tr><td>id</td><td>descricao</td></tr></thead><tbody><tr><td><span>1</span></td><td><span>Arroz</span></td></tr><tr><td><span>2</span></td><td><span>Feijão</span></td></tr></tbody></table>
+
+#### SELECT * FROM fornecedor;
+
+<table><thead><tr><td>id</td><td>nome</td></tr></thead><tbody><tr><td><span>1</span></td><td><span>Turquesa</span></td></tr><tr><td><span>2</span></td><td><span>Emoções</span></td></tr></tbody></table>
+
+#### SELECT * FROM produto_fornecedor;
+
+<table><thead><tr><td>id</td><td>produto_id</td><td>fornecedor_id</td></tr></thead><tbody><tr><td><span>1</span></td><td><span>1</span></td><td><span>2</span></td></tr><tr><td><span>2</span></td><td><span>2</span></td><td><span>1</span></td></tr></tbody></table>
+
+#### SELECT * FROM estoque;
+
+<table><thead><tr><td>id</td><td>produto_id</td><td>quantidade</td></tr></thead><tbody><tr><td><span>1</span></td><td><span>1</span></td><td><span>100</span></td></tr><tr><td><span>2</span></td><td><span>2</span></td><td><span>200</span></td></tr></tbody></table>
+
+#### SELECT * FROM vendedor;
+
+<table><thead><tr><td>id</td><td>nome</td><td>sobrenome</td></tr></thead><tbody><tr><td><span>1</span></td><td><span>Alberto</span></td><td><span>Vieira</span></td></tr><tr><td><span>2</span></td><td><span>Carlos</span></td><td><span>Chagas</span></td></tr></tbody></table>
+
+#### SELECT * FROM pedido;
+
+<table><thead><tr><td>id</td><td>cliente_id</td><td>vendedor_id</td></tr></thead><tbody><tr><td><span>1</span></td><td><span>2</span></td><td><span>1</span></td></tr><tr><td><span>2</span></td><td><span>3</span></td><td><span>1</span></td></tr></tbody></table>
+
+#### SELECT * FROM item_pedido;
+
+<table><thead><tr><td>id</td><td>pedido_id</td><td>produto_id</td><td>quantidade</td><td>valor_unitario</td></tr></thead><tbody><tr><td><span>1</span></td><td><span>1</span></td><td><span>1</span></td><td><span>10</span></td><td><span>5.00</span></td></tr><tr><td><span>2</span></td><td><span>1</span></td><td><span>2</span></td><td><span>5</span></td><td><span>6.00</span></td></tr><tr><td><span>3</span></td><td><span>2</span></td><td><span>1</span></td><td><span>2</span></td><td><span>5.50</span></td></tr><tr><td><span>4</span></td><td><span>2</span></td><td><span>2</span></td><td><span>3</span></td><td><span>6.00</span></td></tr></tbody></table>
