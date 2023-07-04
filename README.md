@@ -51,6 +51,7 @@
 #### INSERT INTO item_pedido (id, pedido_id, produto_id, quantidade, valor_unitario) VALUES (3, 2, 1, 2, 5.50);
 #### INSERT INTO item_pedido (id, pedido_id, produto_id, quantidade, valor_unitario) VALUES (4, 2, 2, 3, 6.00);
 
+
 # SELECT SIMPLES
 
 #### SELECT * FROM cliente;
