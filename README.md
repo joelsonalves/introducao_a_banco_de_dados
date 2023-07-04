@@ -123,6 +123,13 @@
 <table><thead><tr><td>cliente</td></tr></thead><tbody><tr><td><span>João Melo</span></td></tr><tr><td><span>Maria Bezerra</span></td></tr><tr><td><span>Pedro Silva</span></td></tr></tbody></table>
 
 <br><br>
-# 7. Referências
+# 7. HAVING
+
+#### SELECT CONCAT(v.nome, ' ', v.sobrenome) vendedor, p.id num_pedido, SUM(ip.quantidade) itens_vendidos FROM item_pedido ip INNER JOIN pedido p ON ip.pedido_id = p.id INNER JOIN vendedor v ON p.vendedor_id = v.id GROUP BY vendedor, num_pedido HAVING SUM(ip.quantidade) > 5;
+
+<table><thead><tr><td>vendedor</td><td>num_pedido</td><td>itens_vendidos</td></tr></thead><tbody><tr><td><span>Alberto Vieira</span></td><td><span>1</span></td><td><span>15</span></td></tr></tbody></table>
+
+<br><br>
+# 8. Referências
 
 https://extendsclass.com/postgresql-online.html
