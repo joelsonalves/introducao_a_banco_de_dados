@@ -92,3 +92,8 @@
 #### SELECT p.descricao produto, f.nome fornecedor FROM produto_fornecedor pf INNER JOIN produto p ON p.id = pf.produto_id INNER JOIN fornecedor f ON f.id = pf.fornecedor_id;
 
 <table><thead><tr><td>produto</td><td>fornecedor</td></tr></thead><tbody><tr><td><span>Arroz</span></td><td><span>Emoções</span></td></tr><tr><td><span>Feijão</span></td><td><span>Turquesa</span></td></tr></tbody></table>
+
+#### SELECT p.id num_pedido, CONCAT(c.nome, ' ', c.sobrenome) cliente, CONCAT(v.nome, ' ', v.sobrenome) vendedor FROM pedido p INNER JOIN cliente c ON c.id = p.cliente_id INNER JOIN vendedor v ON v.id = p.vendedor_id;
+
+<table><thead><tr><td>num_pedido</td><td>cliente</td><td>vendedor</td></tr></thead><tbody><tr><td><span>1</span></td><td><span>Pedro Silva</span></td><td><span>Alberto Vieira</span></td></tr><tr><td><span>2</span></td><td><span>Maria Bezerra</span></td><td><span>Alberto Vieira</span></td></tr></tbody></table>
+
