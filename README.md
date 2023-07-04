@@ -85,3 +85,8 @@
 #### SELECT * FROM item_pedido;
 
 <table><thead><tr><td>id</td><td>pedido_id</td><td>produto_id</td><td>quantidade</td><td>valor_unitario</td></tr></thead><tbody><tr><td><span>1</span></td><td><span>1</span></td><td><span>1</span></td><td><span>10</span></td><td><span>5.00</span></td></tr><tr><td><span>2</span></td><td><span>1</span></td><td><span>2</span></td><td><span>5</span></td><td><span>6.00</span></td></tr><tr><td><span>3</span></td><td><span>2</span></td><td><span>1</span></td><td><span>2</span></td><td><span>5.50</span></td></tr><tr><td><span>4</span></td><td><span>2</span></td><td><span>2</span></td><td><span>3</span></td><td><span>6.00</span></td></tr></tbody></table>
+
+<br><br>
+# JOIN
+
+
