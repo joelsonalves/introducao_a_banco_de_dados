@@ -100,3 +100,10 @@
 #### SELECT ped.id num_pedido, CONCAT(c.nome, ' ', c.sobrenome) cliente, CONCAT(v.nome, ' ', v.sobrenome) vendedor, prod.descricao produto, ip.quantidade quantidade, ip.valor_unitario, ip.quantidade * ip.valor_unitario valor_total FROM pedido ped INNER JOIN cliente c ON c.id = ped.cliente_id INNER JOIN vendedor v ON v.id = ped.vendedor_id INNER JOIN item_pedido ip ON ip.pedido_id = ped.id INNER JOIN produto prod ON prod.id = ip.produto_id; 
 
 <table><thead><tr><td>num_pedido</td><td>cliente</td><td>vendedor</td><td>produto</td><td>quantidade</td><td>valor_unitario</td><td>valor_total</td></tr></thead><tbody><tr><td><span>1</span></td><td><span>Pedro Silva</span></td><td><span>Alberto Vieira</span></td><td><span>Arroz</span></td><td><span>10</span></td><td><span>5.00</span></td><td><span>50.00</span></td></tr><tr><td><span>1</span></td><td><span>Pedro Silva</span></td><td><span>Alberto Vieira</span></td><td><span>Feijão</span></td><td><span>5</span></td><td><span>6.00</span></td><td><span>30.00</span></td></tr><tr><td><span>2</span></td><td><span>Maria Bezerra</span></td><td><span>Alberto Vieira</span></td><td><span>Arroz</span></td><td><span>2</span></td><td><span>5.50</span></td><td><span>11.00</span></td></tr><tr><td><span>2</span></td><td><span>Maria Bezerra</span></td><td><span>Alberto Vieira</span></td><td><span>Feijão</span></td><td><span>3</span></td><td><span>6.00</span></td><td><span>18.00</span></td></tr></tbody></table>
+
+<br><br>
+# 4. WHERE
+
+#### SELECT CONCAT(v.nome, ' ', v.sobrenome) vendedor, SUM(ip.quantidade * ip.valor_unitario) total_de_vendas FROM pedido p INNER JOIN vendedor v ON v.id = p.vendedor_id INNER JOIN item_pedido ip ON ip.pedido_id = p.id GROUP BY vendedor;
+
+<table><thead><tr><td>vendedor</td><td>total_de_vendas</td></tr></thead><tbody><tr><td><span>Alberto Vieira</span></td><td><span>109.00</span></td></tr></tbody></table>
